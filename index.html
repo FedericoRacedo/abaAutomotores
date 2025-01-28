@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Autos</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#autos">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <button class="comment-btn" onclick="toggleCommentForm()">¿Qué buscas?</button>
+    </nav>
+  </header>
+
+  <!-- Formulario de comentarios -->
+  <div id="comment-form" class="comment-form">
+    <textarea id="comment-text" placeholder="Escribe tu comentario aquí..."></textarea>
+    <button onclick="submitComment()">Enviar</button>
+  </div>
+
+  <main class="">
+
+    <section class="nosotros" id="nosotros">
+      <div class="nosotros-container">
+        <div class="nosotros-imagen">
+          <img src="./imgPag/WhatsApp Image 2025-01-27 at 21.20.24.png" alt="Nosotros">
+        </div>
+        <div class="nosotros-texto">
+          <h2>Sobre Nosotros</h2>
+          <p>
+            Somos una empresa de automotores comprometida con ofrecer los mejores productos y precios en la zona.
+            Desde nuestros inicios en Avenida Constituyentes (General Pacheco), hemos trabajado para brindar una experiencia única a nuestros clientes,
+            enfocándonos en calidad, honestidad, sinceridad y agilidad en nuestros servicios. ¡Gracias por ser parte de nuestra historia!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="autos" id="autos">
+      <h2 class="servicios-titulo">Nuestros Modelos Disponibles</h2>
+      <p class="servicios-descripcion">
+        Explora nuestra amplia gama de automóviles diseñados para satisfacer todas tus necesidades. Haz clic en cualquier
+        modelo para obtener más detalles.
+      </p>
+      <div class="servicios" id="servicios">
+        <div class="card" onclick="toggleDetails(this)">
+          <div class="carousel">
+            <img src="./autosImg/polo.jpg" alt="Auto 1" class="active">
+            <img src="./autosImg/polo2.jpg" alt="Auto 1 - Vista 2">
+            <img src="./autosImg/polo3.jpg" alt="Auto 1 - Vista 3">
+            <img src="./autosImg/polo4.jpg" alt="Auto 1 - Vista 3">
+            <div class="carousel-controls">
+              <button onclick="prevImage(event, this)">&lt;</button>
+              <button onclick="nextImage(event, this)">&gt;</button>
+            </div>
+          </div>
+          <h3>Modelo 1</h3>
+          <button>Solicitar cotización</button>
+          <div class="details">
+            <p>Características del Modelo 1:</p>
+            <ul>
+              <li>Motor: 1.6L</li>
+              <li>Transmisión: Automática</li>
+              <li>Combustible: Gasolina</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(this)">
+          <div class="carousel">
+            <img src="./autosImg/polo.jpg" alt="Auto 1" class="active">
+            <img src="./autosImg/polo2.jpg" alt="Auto 1 - Vista 2">
+            <img src="./autosImg/polo3.jpg" alt="Auto 1 - Vista 3">
+            <img src="./autosImg/polo4.jpg" alt="Auto 1 - Vista 3">
+            <div class="carousel-controls">
+              <button onclick="prevImage(event, this)">&lt;</button>
+              <button onclick="nextImage(event, this)">&gt;</button>
+            </div>
+          </div>
+          <h3>Modelo 1</h3>
+          <button>Solicitar cotización</button>
+          <div class="details">
+            <p>Características del Modelo 1:</p>
+            <ul>
+              <li>Motor: 1.6L</li>
+              <li>Transmisión: Automática</li>
+              <li>Combustible: Gasolina</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(this)">
+          <div class="carousel">
+            <img src="./autosImg/polo.jpg" alt="Auto 1" class="active">
+            <img src="./autosImg/polo2.jpg" alt="Auto 1 - Vista 2">
+            <img src="./autosImg/polo3.jpg" alt="Auto 1 - Vista 3">
+            <img src="./autosImg/polo4.jpg" alt="Auto 1 - Vista 3">
+            <div class="carousel-controls">
+              <button onclick="prevImage(event, this)">&lt;</button>
+              <button onclick="nextImage(event, this)">&gt;</button>
+            </div>
+          </div>
+          <h3>Modelo 1</h3>
+          <button>Solicitar cotización</button>
+          <div class="details">
+            <p>Características del Modelo 1:</p>
+            <ul>
+              <li>Motor: 1.6L</li>
+              <li>Transmisión: Automática</li>
+              <li>Combustible: Gasolina</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="card" onclick="toggleDetails(this)">
+          <div class="carousel">
+            <img src="./autosImg/polo.jpg" alt="Auto 1" class="active">
+            <img src="./autosImg/polo2.jpg" alt="Auto 1 - Vista 2">
+            <img src="./autosImg/polo3.jpg" alt="Auto 1 - Vista 3">
+            <img src="./autosImg/polo4.jpg" alt="Auto 1 - Vista 3">
+            <div class="carousel-controls">
+              <button onclick="prevImage(event, this)">&lt;</button>
+              <button onclick="nextImage(event, this)">&gt;</button>
+            </div>
+          </div>
+          <h3>Modelo 1</h3>
+          <button>Solicitar cotización</button>
+          <div class="details">
+            <p>Características del Modelo 1:</p>
+            <ul>
+              <li>Motor: 1.6L</li>
+              <li>Transmisión: Automática</li>
+              <li>Combustible: Gasolina</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(this)">
+          <div class="carousel">
+            <img src="./autosImg/polo.jpg" alt="Auto 1" class="active">
+            <img src="./autosImg/polo2.jpg" alt="Auto 1 - Vista 2">
+            <img src="./autosImg/polo3.jpg" alt="Auto 1 - Vista 3">
+            <img src="./autosImg/polo4.jpg" alt="Auto 1 - Vista 3">
+            <div class="carousel-controls">
+              <button onclick="prevImage(event, this)">&lt;</button>
+              <button onclick="nextImage(event, this)">&gt;</button>
+            </div>
+          </div>
+          <h3>Modelo 1</h3>
+          <button>Solicitar cotización</button>
+          <div class="details">
+            <p>Características del Modelo 1:</p>
+            <ul>
+              <li>Motor: 1.6L</li>
+              <li>Transmisión: Automática</li>
+              <li>Combustible: Gasolina</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="card" onclick="toggleDetails(this)">
+          <div class="carousel">
+            <img src="./autosImg/polo.jpg" alt="Auto 1" class="active">
+            <img src="./autosImg/polo2.jpg" alt="Auto 1 - Vista 2">
+            <img src="./autosImg/polo3.jpg" alt="Auto 1 - Vista 3">
+            <img src="./autosImg/polo4.jpg" alt="Auto 1 - Vista 3">
+            <div class="carousel-controls">
+              <button onclick="prevImage(event, this)">&lt;</button>
+              <button onclick="nextImage(event, this)">&gt;</button>
+            </div>
+          </div>
+          <h3>Modelo 1</h3>
+          <button>Solicitar cotización</button>
+          <div class="details">
+            <p>Características del Modelo 1:</p>
+            <ul>
+              <li>Motor: 1.6L</li>
+              <li>Transmisión: Automática</li>
+              <li>Combustible: Gasolina</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(this)">
+          <div class="carousel">
+            <img src="./autosImg/polo.jpg" alt="Auto 1" class="active">
+            <img src="./autosImg/polo2.jpg" alt="Auto 1 - Vista 2">
+            <img src="./autosImg/polo3.jpg" alt="Auto 1 - Vista 3">
+            <img src="./autosImg/polo4.jpg" alt="Auto 1 - Vista 3">
+            <div class="carousel-controls">
+              <button onclick="prevImage(event, this)">&lt;</button>
+              <button onclick="nextImage(event, this)">&gt;</button>
+            </div>
+          </div>
+          <h3>Modelo 1</h3>
+          <button>Solicitar cotización</button>
+          <div class="details">
+            <p>Características del Modelo 1:</p>
+            <ul>
+              <li>Motor: 1.6L</li>
+              <li>Transmisión: Automática</li>
+              <li>Combustible: Gasolina</li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="card" onclick="toggleDetails(this)">
+          <div class="carousel">
+            <img src="https://via.placeholder.com/200" alt="Auto 2" class="active">
+            <img src="https://via.placeholder.com/200/ff0000" alt="Auto 2 - Vista 2">
+            <img src="https://via.placeholder.com/200/00ff00" alt="Auto 2 - Vista 3">
+            <div class="carousel-controls">
+              <button onclick="prevImage(event, this)">&lt;</button>
+              <button onclick="nextImage(event, this)">&gt;</button>
+            </div>
+          </div>
+          <h3>Modelo 2</h3>
+          <button>Solicitar cotización</button>
+          <div class="details">
+            <p>Características del Modelo 2:</p>
+            <ul>
+              <li>Motor: 2.0L</li>
+              <li>Transmisión: Manual</li>
+              <li>Combustible: Diesel</li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="card" onclick="toggleDetails(this)">
+          <div class="carousel">
+            <img src="https://via.placeholder.com/200" alt="Auto 3" class="active">
+            <img src="https://via.placeholder.com/200/ff0000" alt="Auto 3 - Vista 2">
+            <img src="https://via.placeholder.com/200/00ff00" alt="Auto 3 - Vista 3">
+            <div class="carousel-controls">
+              <button onclick="prevImage(event, this)">&lt;</button>
+              <button onclick="nextImage(event, this)">&gt;</button>
+            </div>
+          </div>
+          <h3>Modelo 3</h3>
+          <button>Solicitar cotización</button>
+          <div class="details">
+            <p>Características del Modelo 3:</p>
+            <ul>
+              <li>Motor: Eléctrico</li>
+              <li>Autonomía: 400 km</li>
+              <li>Tiempo de carga: 1 hora</li>
+            </ul>
+          </div>
+        </div>
+    
+      </div>
+    
+    </section>
+
+    <section class="contacto" id="contacto">
+
+
+    </section>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

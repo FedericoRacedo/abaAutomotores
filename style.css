@@ -1,0 +1,383 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #1D3557;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  /* Estilos del navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .comment-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Estilos del formulario de comentarios */
+  .comment-form {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .comment-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .comment-form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+
+/*CHAT */
+/* Estilos del botón flotante */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 20%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Caja del chat */
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Encabezado del chat */
+.chat-header {
+    background-color: #25d366;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mensajes */
+.chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.chat-messages p {
+    margin: 5px 0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+}
+
+/* Formulario de entrada */
+
+
+/*Seccion Nosotros*/
+.nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #F8F9FA; /* Fondo suave */
+  margin-bottom: 50px; /* Ajusta el valor según lo que necesites */
+}
+
+.nosotros-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nosotros-texto {
+  text-align: left;
+}
+
+.nosotros-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.nosotros-texto p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.nosotros.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Servicions*/
+.autos {
+  background-color: #FFFFFF;
+}
+.servicios-titulo {
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0;
+  color: #1D3557; /* Azul oscuro */
+  padding-top: 15px;
+}
+
+.servicios-descripcion {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #424242; /* Gris oscuro */
+}
+
+.servicios {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 1rem;
+  padding-top: 50px; /* Ajusta el valor según lo que necesites */
+  background-color: #FFFFFF;
+}
+
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  height: 200px; /* Ajusta según el tamaño deseado */
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Las imágenes se ajustarán sin deformarse */
+  display: none;
+  transition: opacity 0.3s ease-in-out; /* Suaviza la transición entre imágenes */
+}
+
+.carousel img.active {
+  display: block;
+  opacity: 1; /* Asegura visibilidad completa */
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+}
+
+.card button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+.details {
+  display: none;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  text-align: left;
+}
+
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+  navbar {
+    flex-direction: column;  /* Coloca los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    padding: 10px;
+  }
+  
+  .nav-links {
+    flex-direction: column; /* Organiza los enlaces en columna */
+    width: 100%;  /* Asegura que los enlaces ocupen el 100% del ancho */
+    padding: 0;
+    justify-content: center; /* Centra los elementos li */
+    align-items: center; /* Alinea los elementos li al centro */
+  }
+  
+  .nav-links li {
+    margin: 10px 0;  /* Aumenta el espacio entre los enlaces */
+    text-align: center; /* Asegura que el texto dentro de los li esté centrado */
+  }
+  
+  .nav-links a {
+    font-size: 16px;  /* Reduce el tamaño de la fuente para móviles */
+  }
+  
+  .comment-btn {
+    width: 100%;  /* Hace que el botón ocupe todo el ancho disponible */
+    padding: 15px;  /* Aumenta el tamaño del botón */
+    font-size: 18px;  /* Aumenta el tamaño de la fuente */
+    margin-top: 10px;  /* Espacio superior entre el botón y los enlaces */
+  }
+
+  /* Estilo para el formulario de comentarios */
+  #comment-form {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;  /* Ajusta el formulario para no estar tan abajo */
+  }
+
+  /* Asegurar que el área de entrada de texto y el botón se adapten */
+  #comment-form textarea {
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+
+  /* También puedes ajustar el botón de envío */
+  .comment-form button {
+    width: 100%; /* El botón ocupa todo el ancho */
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+
+  .nosotros-container {
+    grid-template-columns: 1fr; /* Una sola columna */
+    text-align: center;
+  }
+
+  .nosotros-texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .nosotros-texto p {
+    font-size: 0.9rem;
+  }
+
+
+  .servicios {
+    grid-template-columns: 1fr;
+  }
+}
