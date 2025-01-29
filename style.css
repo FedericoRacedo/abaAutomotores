@@ -300,6 +300,126 @@ body {
   text-align: left;
 }
 
+.details p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.details ul {
+  padding-left: 20px;
+}
+
+.details ul li {
+  font-size: 14px;
+  color: #555;
+}
+
+/*contacto*/
+/* Estilos para la sección de contacto */
+.contacto {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.contacto-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Estilo para la ubicación */
+.ubicacion {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ubicacion h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.ubicacion p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.ubicacion iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Estilo para las redes sociales */
+.redes-sociales {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.redes-sociales h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.redes-sociales a {
+  margin: 10px;
+  display: inline-block;
+}
+
+.redes-sociales img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo para los datos de contacto */
+.contacto-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contacto-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para las imágenes del local */
+.imagenes-local {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.imagenes-local h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.imagenes-local img {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.imagenes-local img:hover {
+  transform: scale(1.05);
+}
 
 /* Adaptación para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -379,5 +499,13 @@ body {
 
   .servicios {
     grid-template-columns: 1fr;
+  }
+
+  .contacto-contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .imagenes-local img {
+      max-width: 100%;
   }
 }
