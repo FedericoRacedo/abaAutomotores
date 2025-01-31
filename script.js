@@ -89,3 +89,25 @@ function prevImage(event, button) {
   images[activeIndex].classList.remove('active');
   images[(activeIndex - 1 + images.length) % images.length].classList.add('active');
 }
+
+
+// Suponiendo que tienes un archivo JSON con los autos
+fetch('./autos.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.autos); // Accede al array de autos
+    // Aquí puedes recorrer los autos y mostrarlos en tu HTML
+    data.autos.forEach(auto => {
+      const divAuto = document.createElement('div');
+      divAuto.classList.add('auto');
+      divAuto.innerHTML = `
+        <img src="${auto.imagen}" alt="${auto.modelo}">
+        <h3>${auto.modelo}</h3>
+        <p>Año: ${auto.año}</p>
+        <p>Precio: $${auto.precio}</p>
+        <p>${auto.descripcion}</p>
+      `;
+      document.querySelector('#autos').appendChild(divAuto);
+    });
+  })
+  .catch(error => console.error('Error al cargar los autos:', error));

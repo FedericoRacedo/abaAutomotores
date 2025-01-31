@@ -1,0 +1,33 @@
+{
+    "Auto": [
+      {
+        "id": 1,
+        "modelo": "Toyota Corolla",
+        "año": 2023,
+        "color": "Blanco",
+        "precio": 25000,
+        "imagen": "./autosImg/polo.jpg",
+        "descripcion": "Sedán compacto, económico y confiable."
+      },
+      {
+        "id": 2,
+        "modelo": "Honda Civic",
+        "año": 2022,
+        "color": "Negro",
+        "precio": 23000,
+        "imagen": "./autosImg/fordRangger.webp",
+        "descripcion": "Sedán con buena tecnología y confort."
+      }
+    ],
+    "Motos": [
+      {
+        "id": 3,
+        "modelo": "Ford Escape",
+        "año": 2021,
+        "color": "Azul",
+        "precio": 28000,
+        "imagen": "./autosImg/c4.webp",
+        "descripcion": "SUV espaciosa y con gran rendimiento."
+      }
+    ]
+  }

@@ -1,14 +1,14 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
-  font-family:  'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 img {
-  max-width:100%;
+  max-width: 100%;
 }
 
 .container {
@@ -17,193 +17,223 @@ img {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    background-color: #1D3557;
-    color: white;
-    padding: 10px 0;
-  }
-  
-  /* Estilos del navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-  }
-  
-  .nav-links li {
-    margin: 0 15px;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .comment-btn {
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  /* Estilos del formulario de comentarios */
-  .comment-form {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  
-  .comment-form textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .comment-form button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #1D3557;
+  color: white;
+  padding: 10px 0;
+}
+
+/* Estilos del navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.comment-btn {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Estilos del formulario de comentarios */
+.comment-form {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.comment-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.comment-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
 
 /*CHAT */
 /* Estilos del botón flotante */
 .chat-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: white;
-    border: none;
-    border-radius: 20%;
-    padding: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 20%;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Caja del chat */
 .chat-box {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none; /* Oculto por defecto */
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  /* Oculto por defecto */
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
 }
 
 /* Encabezado del chat */
 .chat-header {
-    background-color: #25d366;
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #25d366;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Mensajes */
 .chat-messages {
-    height: 200px;
-    overflow-y: auto;
-    padding: 10px;
-    background-color: #f9f9f9;
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #f9f9f9;
 }
 
 .chat-messages p {
-    margin: 5px 0;
-    padding: 8px 10px;
-    border-radius: 5px;
-    background-color: #e9e9e9;
+  margin: 5px 0;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background-color: #e9e9e9;
 }
 
 /* Formulario de entrada */
 
 
 /*Seccion Nosotros*/
+/* Estilos generales para la sección "Sobre Nosotros" */
 .nosotros {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  background-color: #F8F9FA; /* Fondo suave */
-  margin-bottom: 50px; /* Ajusta el valor según lo que necesites */
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  margin-top: 50px;
 }
 
+/* Contenedor principal */
 .nosotros-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-width: 1200px;
-  width: 100%;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Asegura que en pantallas pequeñas se apilen */
+  gap: 20px;
+  /* Reducimos el espacio entre la imagen y el texto */
 }
 
+/* Estilos para la imagen */
 .nosotros-imagen img {
   width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* La imagen ocupará todo el ancho disponible */
+  max-width: 500px;
+  /* Limita el tamaño máximo de la imagen */
+  border-radius: 0;
+  /* Asegura que no tenga bordes redondeados */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efecto hover en la imagen */
+.nosotros-imagen img:hover {
+  transform: scale(1.05);
+  /* Agranda la imagen al pasar el ratón */
+  box-shadow: none;
+  /* Quitamos cualquier sombra */
+}
+
+/* Estilos para el texto */
 .nosotros-texto {
-  text-align: left;
-}
-
-.nosotros-texto h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  max-width: 600px;
+  font-family: 'Roboto', sans-serif;
   color: #333;
 }
 
+.nosotros-texto h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  /* Reducimos el margen inferior del título */
+  font-weight: bold;
+}
+
 .nosotros-texto p {
-  font-size: 1rem;
-  color: #555;
+  font-size: 18px;
   line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+  /* Reducimos el margen inferior del párrafo */
+}
+
+/* Agregar un borde sutil al contenedor de la imagen y el texto */
+.nosotros-container {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nosotros.visible {
@@ -215,11 +245,13 @@ body {
 .autos {
   background-color: #FFFFFF;
 }
+
 .servicios-titulo {
   font-size: 2rem;
   text-align: center;
   margin: 20px 0;
-  color: #1D3557; /* Azul oscuro */
+  color: #1D3557;
+  /* Azul oscuro */
   padding-top: 15px;
 }
 
@@ -227,7 +259,8 @@ body {
   font-size: 1rem;
   text-align: center;
   margin-bottom: 30px;
-  color: #424242; /* Gris oscuro */
+  color: #424242;
+  /* Gris oscuro */
 }
 
 .servicios {
@@ -235,7 +268,8 @@ body {
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: 1rem;
-  padding-top: 50px; /* Ajusta el valor según lo que necesites */
+  padding-top: 50px;
+  /* Ajusta el valor según lo que necesites */
   background-color: #FFFFFF;
 }
 
@@ -257,20 +291,24 @@ body {
 .carousel {
   position: relative;
   overflow: hidden;
-  height: 200px; /* Ajusta según el tamaño deseado */
+  height: 200px;
+  /* Ajusta según el tamaño deseado */
 }
 
 .carousel img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Las imágenes se ajustarán sin deformarse */
+  object-fit: cover;
+  /* Las imágenes se ajustarán sin deformarse */
   display: none;
-  transition: opacity 0.3s ease-in-out; /* Suaviza la transición entre imágenes */
+  transition: opacity 0.3s ease-in-out;
+  /* Suaviza la transición entre imágenes */
 }
 
 .carousel img.active {
   display: block;
-  opacity: 1; /* Asegura visibilidad completa */
+  opacity: 1;
+  /* Asegura visibilidad completa */
 }
 
 .carousel-controls {
@@ -441,34 +479,47 @@ body {
 
 /* Adaptación para pantallas pequeñas */
 @media (max-width: 768px) {
-  navbar {
-    flex-direction: column;  /* Coloca los elementos en columna */
-    align-items: flex-start; /* Alinea los elementos al inicio */
+  .navbar {
+    flex-direction: column;
+    /* Coloca los elementos en columna */
+    align-items: flex-start;
+    /* Alinea los elementos al inicio */
     padding: 10px;
   }
-  
+
   .nav-links {
-    flex-direction: column; /* Organiza los enlaces en columna */
-    width: 100%;  /* Asegura que los enlaces ocupen el 100% del ancho */
+    flex-direction: column;
+    /* Organiza los enlaces en columna */
+    width: 100%;
+    /* Asegura que los enlaces ocupen el 100% del ancho */
     padding: 0;
-    justify-content: center; /* Centra los elementos li */
-    align-items: center; /* Alinea los elementos li al centro */
+    justify-content: center;
+    /* Centra los elementos li */
+    align-items: center;
+    /* Alinea los elementos li al centro */
   }
-  
+
   .nav-links li {
-    margin: 10px 0;  /* Aumenta el espacio entre los enlaces */
-    text-align: center; /* Asegura que el texto dentro de los li esté centrado */
+    margin: 10px 0;
+    /* Aumenta el espacio entre los enlaces */
+    text-align: center;
+    /* Asegura que el texto dentro de los li esté centrado */
   }
-  
+
   .nav-links a {
-    font-size: 16px;  /* Reduce el tamaño de la fuente para móviles */
+    font-size: 16px;
+    /* Reduce el tamaño de la fuente para móviles */
   }
-  
+
   .comment-btn {
-    width: 100%;  /* Hace que el botón ocupe todo el ancho disponible */
-    padding: 15px;  /* Aumenta el tamaño del botón */
-    font-size: 18px;  /* Aumenta el tamaño de la fuente */
-    margin-top: 10px;  /* Espacio superior entre el botón y los enlaces */
+    width: 100%;
+    /* Hace que el botón ocupe todo el ancho disponible */
+    padding: 15px;
+    /* Aumenta el tamaño del botón */
+    font-size: 18px;
+    /* Aumenta el tamaño de la fuente */
+    margin-top: 10px;
+    /* Espacio superior entre el botón y los enlaces */
   }
 
   /* Estilo para el formulario de comentarios */
@@ -476,7 +527,8 @@ body {
     width: 80%;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10px;  /* Ajusta el formulario para no estar tan abajo */
+    bottom: 10px;
+    /* Ajusta el formulario para no estar tan abajo */
   }
 
   /* Asegurar que el área de entrada de texto y el botón se adapten */
@@ -489,7 +541,8 @@ body {
 
   /* También puedes ajustar el botón de envío */
   .comment-form button {
-    width: 100%; /* El botón ocupa todo el ancho */
+    width: 100%;
+    /* El botón ocupa todo el ancho */
     padding: 12px;
     font-size: 16px;
     background-color: #4caf50;
@@ -498,12 +551,23 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
-  
-
 
   .nosotros-container {
-    grid-template-columns: 1fr; /* Una sola columna */
+    flex-direction: column;
+    /* Apilar los elementos en dispositivos pequeños */
     text-align: center;
+    justify-content: center;
+  }
+
+  .nosotros-imagen img {
+    max-width: 90%;
+    text-align: center;
+    justify-content: center;
+    /* Asegura que la imagen no se salga del contenedor */
+  }
+
+  .nosotros-texto {
+    max-width: 100%;
   }
 
   .nosotros-texto h2 {
@@ -524,6 +588,6 @@ body {
   }
 
   .imagenes-local img {
-      max-width: 100%;
+    max-width: 100%;
   }
 }
