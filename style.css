@@ -263,113 +263,106 @@ footer {
   /* Gris oscuro */
 }
 
-.servicios {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 1rem;
-  padding-top: 50px;
-  /* Ajusta el valor según lo que necesites */
-  background-color: #FFFFFF;
+/* Contenedor de autos */
+#autos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-
-.card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
+/* Tarjetas de autos */
+.auto-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 380px; /* Más grande */
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+.auto-card:hover {
+  transform: scale(1.05);
 }
 
-.carousel {
+/* Slider de imágenes */
+.auto-slider {
   position: relative;
+  width: 100%;
+  height: 250px; /* Más grande */
   overflow: hidden;
-  height: 200px;
-  /* Ajusta según el tamaño deseado */
+  border-radius: 10px;
 }
 
-.carousel img {
+.auto-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Las imágenes se ajustarán sin deformarse */
   display: none;
-  transition: opacity 0.3s ease-in-out;
-  /* Suaviza la transición entre imágenes */
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.carousel img.active {
+.auto-img.active {
   display: block;
   opacity: 1;
-  /* Asegura visibilidad completa */
 }
 
-.carousel-controls {
+/* Botones del slider */
+button.prev, button.next {
   position: absolute;
   top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   transform: translateY(-50%);
-}
-
-.carousel-controls button {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
   border: none;
-  padding: 0.5rem;
+  padding: 10px;
   cursor: pointer;
   border-radius: 50%;
+  transition: background 0.3s ease-in-out;
 }
 
-.card h3 {
-  margin: 0.5rem 0;
+button.prev:hover, button.next:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 
-.card button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+/* Texto del auto */
+h2 {
+  font-size: 22px;
+  margin: 15px 0 10px;
+  color: #333;
 }
 
-.card button:hover {
-  background-color: #0056b3;
+p {
+  font-size: 16px;
+  color: #666;
 }
 
-.details {
-  display: none;
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-top: 1px solid #ddd;
-  text-align: left;
+p strong {
+  color: #000;
+  font-size: 18px;
 }
 
-.details p {
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 5px;
   font-weight: bold;
-  margin-bottom: 5px;
+  transition: background 0.3s ease-in-out;
 }
 
-.details ul {
-  padding-left: 20px;
-}
-
-.details ul li {
-  font-size: 14px;
-  color: #555;
-}
-
+.whatsapp-btn:hover {
+  background-color: #1ebe57;
+} 
 /*contacto*/
 /* Estilos para la sección de contacto */
 .contacto {
@@ -476,6 +469,48 @@ footer {
 .imagenes-local img:hover {
   transform: scale(1.05);
 }
+
+.auto-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auto-slider {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.auto-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: none;
+}
+
+.auto-img.active {
+  display: block;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+button.prev { left: 5px; }
+button.next { right: 5px; }
 
 /* Adaptación para pantallas pequeñas */
 @media (max-width: 768px) {

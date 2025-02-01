@@ -92,22 +92,60 @@ function prevImage(event, button) {
 
 
 // Suponiendo que tienes un archivo JSON con los autos
-fetch('./autos.json')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data.autos); // Accede al array de autos
-    // Aquí puedes recorrer los autos y mostrarlos en tu HTML
-    data.autos.forEach(auto => {
-      const divAuto = document.createElement('div');
-      divAuto.classList.add('auto');
-      divAuto.innerHTML = `
-        <img src="${auto.imagen}" alt="${auto.modelo}">
-        <h3>${auto.modelo}</h3>
-        <p>Año: ${auto.año}</p>
-        <p>Precio: $${auto.precio}</p>
-        <p>${auto.descripcion}</p>
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("autos.json")
+      .then(response => response.json())
+      .then(autos => mostrarAutos(autos))
+      .catch(error => console.error("Error cargando los autos:", error));
+});
+
+function mostrarAutos(autos) {
+  const container = document.getElementById("autos-container");
+  container.innerHTML = ""; // Limpiar contenedor antes de mostrar
+
+  autos.forEach(auto => {
+      // Crear tarjeta de auto
+      const card = document.createElement("div");
+      card.classList.add("auto-card");
+
+      // Crear slider de imágenes
+      let imagenesHTML = "";
+      auto.imagenes.forEach((img, index) => {
+          imagenesHTML += `<img src="${img}" class="auto-img ${index === 0 ? 'active' : ''}" data-index="${index}" />`;
+      });
+
+      // Crear link de WhatsApp con mensaje personalizado
+      const whatsappURL = `https://api.whatsapp.com/send?phone=TU_NUMERO_DE_WHATSAPP&text=Hola,%20quiero%20más%20información%20sobre%20${encodeURIComponent(auto.marca)}%20${encodeURIComponent(auto.modelo)}%20(${auto.año}).`;
+
+      // Estructura del auto en HTML
+      card.innerHTML = `
+          <div class="auto-slider">
+              ${imagenesHTML}
+              <button class="prev">◀</button>
+              <button class="next">▶</button>
+          </div>
+          <h2>${auto.marca} ${auto.modelo} (${auto.año})</h2>
+          <p>${auto.descripcion}</p>
+          <p><strong>Precio:</strong> $${auto.precio}</p>
+          <a href="${whatsappURL}" target="_blank" class="whatsapp-btn">📲 Quiero más información</a>
       `;
-      document.querySelector('#autos').appendChild(divAuto);
-    });
-  })
-  .catch(error => console.error('Error al cargar los autos:', error));
+
+      container.appendChild(card);
+
+      // Lógica del slider
+      const images = card.querySelectorAll(".auto-img");
+      let currentIndex = 0;
+
+      card.querySelector(".next").addEventListener("click", () => {
+          images[currentIndex].classList.remove("active");
+          currentIndex = (currentIndex + 1) % images.length;
+          images[currentIndex].classList.add("active");
+      });
+
+      card.querySelector(".prev").addEventListener("click", () => {
+          images[currentIndex].classList.remove("active");
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          images[currentIndex].classList.add("active");
+      });
+  });
+}
